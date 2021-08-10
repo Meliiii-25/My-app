@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App🌦</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="src/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+      <form class="input-group search-panel" id="search-city-form">
+        <button type="button" class="btn btn-outline-secondar">
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+        <input
+          type="text"
+          class="form-control"
+          id="city-input"
+          placeholder="Enter your city"
+          required
+        />
+        <input type="submit" class="btn btn-outline-secondary" value="Search" />
+      </form>
+
+      <div class="row row-1">
+        <h1 class="col-5 today-temp" id="current-temperature">
+          <span></span>
+        </h1>
+        <h2 class="col-5 clima" id="temp-description">
+          <span></span>
+        </h2>
+        <div class="col-3 UOM-temp">
+          <span class="clickables" id="celsius">Сº</span> |
+          <span class="clickables" id="farenheit">Fº</span>
+        </div>
+        </div>
+      </div>
+
+      
+      <br />
+      <div class="row row-3">
+        <div class="col-6 main-info">
+          <h3 class="date" id="date-and-time">Date & Time</h3>
+          <h3 class="state">Clear with cloudy intervals</h3>
+        </div>
+
+        <ul>
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span>km/h</li>
+          <li>Feels like: <span id="feels-like"></span>°C</li>
+        </ul>
+
+          <br />
+          <div class="row">
+            <div class="col-7 today-statements">Last updated:</div>
+            <div class="col-5 update-time">9:45 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="scrolling-wrapper">
+        <div class="card hourly">
+          <p class="days">Wed.</p>
+          <img
+            src="images/Sun-Clouds.png"
+            class="Sun-Clouds"
+            alt="image-weather-small"
+          />
+          <p class="temp">20°</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Thurs.</p>
+          <img
+            src="images/Rain1.png"
+            class="Drizzle"
+            alt="image-weather-small"
+          />
+          <p class="temp">22º</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Fri.</p>
+          <img
+            src="images/Rain2.png"
+            class="Strong-rain"
+            alt="image-weather-small"
+          />
+          <p class="temp">22º</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Sat.</p>
+          <img
+            src="images/Rain1.png"
+            class="Drizzle"
+            alt="image-weather-small"
+          />
+          <p class="temp">18º</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Sun.</p>
+          <img
+            src="images/Rain2.png"
+            class="Strong-rain"
+            alt="image-weather-small"
+          />
+          <p class="temp">21º</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Mon.</p>
+          <img
+            src="images/Rain1.png"
+            class="Drizzle"
+            alt="image-weather-small"
+          />
+          <p class="temperature">19º</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Tues.</p>
+          <img
+            src="images/Rain1.png"
+            class="Drizzle"
+            alt="image-weather-small"
+          />
+          <p class="temperature">19º</p>
+        </div>
+
+        <div class="card hourly">
+          <p class="days">Wed.</p>
+          <img
+            src="images/Sun-Clouds.png"
+            class="Sun-Clouds"
+            alt="image-weather-small"
+          />
+          <p class="temperature">21º</p>
+        </div>
+      </div>
+      <button class="location-button">My Location</button>
+
+      <footer>
+        <p class="source-code clickables">Homework Week 5</p>
+        <p>Code by Melissa Urrego</p>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+    
+</body>
+</html>
